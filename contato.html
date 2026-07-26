@@ -1,1 +1,1338 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contato | Canil LRD</title><link rel="stylesheet" href="style.css"></head><body><header><div class="container nav"><a class="logo" href="index.html">CANIL <span>LRD</span></a><nav><a href="caes.html">Cães</a><a href="linhagens.html">Linhagens</a><a href="ninhadas.html">Ninhadas</a><a href="galeria.html">Galeria</a><a href="canil.html">O Canil</a><a href="contato.html">Contato</a></nav></div></header><main><section><div class="container"><div class="eyebrow">Contato</div><h1>Fale com o Canil LRD</h1><p class="lead">Entre em contato para conhecer o projeto, os cães e futuras ninhadas.</p></div></section><section><div class="container grid"><div class="card"><h2>WhatsApp</h2><p class="muted">Adicione aqui o número oficial do Canil LRD.</p><a class="btn primary" href="#">WhatsApp</a></div><div class="card"><h2>Instagram</h2><p class="muted">Adicione aqui o perfil oficial do Canil LRD.</p><a class="btn" href="#">Instagram</a></div><div class="card"><h2>E-mail</h2><p class="muted">Adicione aqui o e-mail oficial.</p><a class="btn" href="mailto:">Enviar e-mail</a></div></div></section></main><footer>© 2026 Canil LRD · Dobermanns</footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contato | Canil LRD</title>
+
+    <meta
+        name="description"
+        content="Entre em contato com o Canil LRD para informações sobre nossos cães, linhagens e futuras ninhadas."
+    >
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #1a1a1a 0%,
+                    #0b0b0b 40%,
+                    #050505 100%
+                );
+
+            color: #eeeeee;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* ========================================
+           MENU PRINCIPAL
+        ======================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 9999;
+
+            background:
+                rgba(5, 5, 5, 0.97);
+
+            border-bottom:
+                1px solid #292929;
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
+        }
+
+
+        .header-inner {
+
+            width: 100%;
+
+            max-width: 1400px;
+
+            min-height: 76px;
+
+            margin: 0 auto;
+
+            padding:
+                15px 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+        }
+
+
+        .logo {
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            white-space: nowrap;
+
+        }
+
+
+        .logo span {
+
+            color: #999999;
+
+            font-weight: normal;
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+        }
+
+
+        nav a {
+
+            position: relative;
+
+            color: #999999;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+            padding: 10px 0;
+
+            white-space: nowrap;
+
+            transition:
+                color 0.3s ease;
+
+        }
+
+
+        nav a:hover {
+
+            color: #ffffff;
+
+        }
+
+
+        nav a.active {
+
+            color: #ffffff;
+
+        }
+
+
+        nav a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 2px;
+
+            height: 1px;
+
+            background: #ffffff;
+
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+
+            min-height:
+                65vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                80px 30px;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,0.35),
+                    rgba(0,0,0,0.9)
+                ),
+
+                url("daemon-03.png")
+                center center / cover
+                no-repeat;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .hero-subtitle {
+
+            color: #999999;
+
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            color: #ffffff;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    90px
+                );
+
+            font-weight: normal;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero p {
+
+            color: #cccccc;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* ========================================
+           CONTEÚDO
+        ======================================== */
+
+        main {
+
+            width: 100%;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+
+        section {
+
+            padding:
+                100px 40px;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+
+        }
+
+
+        .section-title span {
+
+            display: block;
+
+            color: #777777;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .section-title h2 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            font-weight: normal;
+
+        }
+
+
+        /* ========================================
+           INTRODUÇÃO
+        ======================================== */
+
+        .intro {
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+        }
+
+
+        .intro p {
+
+            color: #999999;
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* ========================================
+           CONTATOS
+        ======================================== */
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .contact-card {
+
+            padding:
+                45px 30px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #090909
+                );
+
+            border:
+                1px solid #292929;
+
+            transition:
+                transform 0.4s ease,
+                border-color 0.4s ease;
+
+        }
+
+
+        .contact-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #555555;
+
+        }
+
+
+        .contact-icon {
+
+            width: 60px;
+
+            height: 60px;
+
+            margin:
+                0 auto 25px;
+
+            border:
+                1px solid #555555;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #cccccc;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 20px;
+
+        }
+
+
+        .contact-card h3 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 25px;
+
+            font-weight: normal;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-card p {
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .contact-link {
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            border-bottom:
+                1px solid #555555;
+
+            padding-bottom: 7px;
+
+            transition:
+                border-color 0.3s ease;
+
+        }
+
+
+        .contact-link:hover {
+
+            border-color:
+                #ffffff;
+
+        }
+
+
+        /* ========================================
+           MENSAGEM
+        ======================================== */
+
+        .message-section {
+
+            border-top:
+                1px solid #222222;
+
+        }
+
+
+        .message {
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+        }
+
+
+        .message p {
+
+            color: #888888;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border:
+                1px solid #555555;
+
+            padding:
+                15px 32px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
+
+        }
+
+
+        .button:hover {
+
+            background: #222222;
+
+            border-color: #ffffff;
+
+        }
+
+
+        /* ========================================
+           NAVEGAÇÃO FINAL
+        ======================================== */
+
+        .quick-links {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .quick-link {
+
+            padding:
+                30px;
+
+            text-align: center;
+
+            border:
+                1px solid #292929;
+
+            background: #0d0d0d;
+
+            text-decoration: none;
+
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+
+        .quick-link:hover {
+
+            border-color:
+                #555555;
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .quick-link h3 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            font-weight: normal;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .quick-link p {
+
+            color: #777777;
+
+            font-size: 12px;
+
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+
+            border-top:
+                1px solid #222222;
+
+            background: #050505;
+
+            text-align: center;
+
+            padding:
+                50px 20px;
+
+        }
+
+
+        footer h2 {
+
+            color: #dddddd;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
+            font-weight: normal;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        footer p {
+
+            color: #666666;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media
+        (max-width: 1050px) {
+
+            .header-inner {
+
+                flex-direction: column;
+
+                padding:
+                    18px 20px;
+
+                gap: 12px;
+
+            }
+
+
+            nav {
+
+                justify-content: center;
+
+                gap:
+                    10px 18px;
+
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .quick-links {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media
+        (max-width: 650px) {
+
+            .header-inner {
+
+                padding:
+                    18px 15px;
+
+            }
+
+
+            nav {
+
+                gap:
+                    8px 13px;
+
+            }
+
+
+            nav a {
+
+                font-size: 9px;
+
+                letter-spacing:
+                    0.7px;
+
+            }
+
+
+            section {
+
+                padding:
+                    70px 15px;
+
+            }
+
+
+            .hero {
+
+                min-height:
+                    70vh;
+
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .quick-links {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         MENU PRINCIPAL
+    ======================================== -->
+
+    <header>
+
+        <div class="header-inner">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                CANIL <span>LRD</span>
+            </a>
+
+
+            <nav>
+
+
+                <a href="index.html">
+                    INÍCIO
+                </a>
+
+
+                <a href="canil.html">
+                    O CANIL
+                </a>
+
+
+                <a href="daemon.html">
+                    DAEMON
+                </a>
+
+
+                <a href="linhagens.html">
+                    LINHAGENS
+                </a>
+
+
+                <a href="ninhadas.html">
+                    NINHADAS
+                </a>
+
+
+                <a href="galeria.html">
+                    GALERIA
+                </a>
+
+
+                <a href="caes.html">
+                    CÃES
+                </a>
+
+
+                <a
+                    href="contato.html"
+                    class="active"
+                >
+                    CONTATO
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <div class="hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-subtitle">
+                CANIL LRD
+            </div>
+
+
+            <h1>
+                Contato
+            </h1>
+
+
+            <p>
+
+                Entre em contato com o Canil LRD
+                para conhecer nosso trabalho,
+                nossos cães e futuras ninhadas.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <main>
+
+
+        <!-- ========================================
+             INTRODUÇÃO
+        ======================================== -->
+
+        <section>
+
+
+            <div class="section-title">
+
+
+                <span>
+                    Fale conosco
+                </span>
+
+
+                <h2>
+                    Entre em contato
+                </h2>
+
+
+            </div>
+
+
+            <div class="intro">
+
+
+                <p>
+
+                    Para informações sobre os
+                    exemplares, linhagens,
+                    ninhadas e disponibilidade,
+                    entre em contato diretamente
+                    com o Canil LRD.
+
+                </p>
+
+
+                <p>
+
+                    Estamos disponíveis para
+                    apresentar nosso trabalho
+                    e esclarecer suas dúvidas.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             CARDS DE CONTATO
+        ======================================== -->
+
+        <section>
+
+
+            <div class="contact-grid">
+
+
+                <!-- WHATSAPP -->
+
+                <article class="contact-card">
+
+
+                    <div class="contact-icon">
+                        W
+                    </div>
+
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+
+                    <p>
+
+                        Entre em contato diretamente
+                        pelo WhatsApp do Canil LRD.
+
+                    </p>
+
+
+                    <!--
+                    SUBSTITUA O LINK ABAIXO
+                    PELO SEU WHATSAPP REAL
+
+                    Exemplo:
+                    https://wa.me/5511999999999
+                    -->
+
+                    <a
+                        href="#"
+                        class="contact-link"
+                    >
+                        Falar pelo WhatsApp
+                    </a>
+
+
+                </article>
+
+
+                <!-- INSTAGRAM -->
+
+                <article class="contact-card">
+
+
+                    <div class="contact-icon">
+                        I
+                    </div>
+
+
+                    <h3>
+                        Instagram
+                    </h3>
+
+
+                    <p>
+
+                        Acompanhe as novidades,
+                        registros e atualizações
+                        do Canil LRD.
+
+                    </p>
+
+
+                    <!--
+                    SUBSTITUA O LINK ABAIXO
+                    PELO INSTAGRAM REAL DO CANIL
+
+                    Exemplo:
+                    https://instagram.com/seuinstagram
+                    -->
+
+                    <a
+                        href="#"
+                        class="contact-link"
+                    >
+                        Visitar Instagram
+                    </a>
+
+
+                </article>
+
+
+                <!-- E-MAIL -->
+
+                <article class="contact-card">
+
+
+                    <div class="contact-icon">
+                        @
+                    </div>
+
+
+                    <h3>
+                        E-mail
+                    </h3>
+
+
+                    <p>
+
+                        Para informações e contatos
+                        profissionais, envie uma
+                        mensagem por e-mail.
+
+                    </p>
+
+
+                    <!--
+                    SUBSTITUA PELO E-MAIL REAL
+
+                    Exemplo:
+                    mailto:contato@canillrd.com.br
+                    -->
+
+                    <a
+                        href="#"
+                        class="contact-link"
+                    >
+                        Enviar e-mail
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             MENSAGEM
+        ======================================== -->
+
+        <section class="message-section">
+
+
+            <div class="section-title">
+
+
+                <span>
+                    Canil LRD
+                </span>
+
+
+                <h2>
+                    Será um prazer conversar
+                </h2>
+
+
+            </div>
+
+
+            <div class="message">
+
+
+                <p>
+
+                    Conheça mais sobre o Canil LRD,
+                    nossos exemplares, linhagens
+                    e projetos de criação.
+
+                    Entre em contato para receber
+                    informações atualizadas.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             LINKS RÁPIDOS
+        ======================================== -->
+
+        <section>
+
+
+            <div class="section-title">
+
+
+                <span>
+                    Explore
+                </span>
+
+
+                <h2>
+                    Conheça o Canil LRD
+                </h2>
+
+
+            </div>
+
+
+            <div class="quick-links">
+
+
+                <a
+                    href="daemon.html"
+                    class="quick-link"
+                >
+
+
+                    <h3>
+                        Daemon
+                    </h3>
+
+
+                    <p>
+                        Conheça nosso exemplar
+                        de destaque.
+                    </p>
+
+
+                </a>
+
+
+                <a
+                    href="linhagens.html"
+                    class="quick-link"
+                >
+
+
+                    <h3>
+                        Linhagens
+                    </h3>
+
+
+                    <p>
+                        Conheça nossos pedigrees
+                        e genealogias.
+                    </p>
+
+
+                </a>
+
+
+                <a
+                    href="galeria.html"
+                    class="quick-link"
+                >
+
+
+                    <h3>
+                        Galeria
+                    </h3>
+
+
+                    <p>
+                        Veja os registros do
+                        Canil LRD.
+                    </p>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer>
+
+
+        <h2>
+            CANIL LRD
+        </h2>
+
+
+        <p>
+            Excelência em Dobermanns
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
