@@ -1,839 +1,1302 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Linhagens | Canil LRD</title>
 
+    <meta
+        name="description"
+        content="Pedigree e linhagem de Daemon — Canil LRD."
+    >
+
     <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            background: #080808;
-            color: #e8e8e8;
-            font-family: Arial, Helvetica, sans-serif;
-            min-height: 100vh;
+        html {
+            scroll-behavior: smooth;
         }
+
+        body {
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #1a1a1a 0%,
+                    #0b0b0b 40%,
+                    #050505 100%
+                );
+
+            color: #eeeeee;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* ========================================
+           MENU PRINCIPAL
+        ======================================== */
 
         header {
-            background: #0d0d0d;
-            border-bottom: 1px solid #333;
-            padding: 20px 50px;
+
             position: sticky;
+
             top: 0;
-            z-index: 10;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 9999;
+
+            background:
+                rgba(5, 5, 5, 0.97);
+
+            border-bottom:
+                1px solid #292929;
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
         }
 
-        .nav {
+
+        .header-inner {
+
+            width: 100%;
+
             max-width: 1400px;
-            margin: auto;
+
+            min-height: 76px;
+
+            margin: 0 auto;
+
+            padding:
+                15px 30px;
+
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
+
+            justify-content: space-between;
+
             gap: 30px;
+
         }
+
 
         .logo {
-            color: #d9a441;
-            font-size: 24px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
             font-weight: bold;
+
             letter-spacing: 3px;
+
+            white-space: nowrap;
+
         }
+
+
+        .logo span {
+
+            color: #999999;
+
+            font-weight: normal;
+
+        }
+
 
         nav {
+
             display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
             flex-wrap: wrap;
+
             gap: 20px;
+
         }
+
 
         nav a {
-            color: #ccc;
+
+            position: relative;
+
+            color: #999999;
+
             text-decoration: none;
-            font-size: 13px;
+
+            font-size: 11px;
+
+            letter-spacing: 1.2px;
+
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
+
+            padding: 10px 0;
+
+            white-space: nowrap;
+
+            transition:
+                color 0.3s ease;
+
         }
 
-        nav a:hover,
-        nav a.active {
-            color: #d9a441;
+
+        nav a:hover {
+
+            color: #ffffff;
+
         }
+
+
+        nav a.active {
+
+            color: #ffffff;
+
+        }
+
+
+        nav a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 2px;
+
+            height: 1px;
+
+            background: #ffffff;
+
+        }
+
+
+        /* ========================================
+           CONTEÚDO
+        ======================================== */
 
         main {
+
             max-width: 1500px;
-            margin: auto;
-            padding: 60px 30px 100px;
+
+            margin: 0 auto;
+
+            padding:
+                80px 30px
+                100px;
+
         }
 
-        .intro {
+
+        /* ========================================
+           TÍTULO
+        ======================================== */
+
+        .titulo {
+
             text-align: center;
-            margin-bottom: 55px;
+
+            margin-bottom: 70px;
+
         }
 
-        .intro span {
-            color: #d9a441;
-            text-transform: uppercase;
+
+        .titulo .subtitulo {
+
+            color: #777777;
+
+            font-size: 11px;
+
             letter-spacing: 4px;
-            font-size: 12px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
         }
 
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 48px;
+
+        .titulo h1 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    42px,
+                    6vw,
+                    72px
+                );
+
             font-weight: normal;
-            margin: 15px 0;
-            color: #f5f5f5;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+
         }
 
-        .intro p {
-            color: #999;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.7;
+
+        .titulo p {
+
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            color: #888888;
+
             font-size: 15px;
+
+            line-height: 1.8;
+
         }
 
-        /* ÁRVORE PRINCIPAL */
+
+        /* ========================================
+           CABEÇALHO DA LINHAGEM
+        ======================================== */
+
+        .pedigree-header {
+
+            max-width: 1100px;
+
+            margin:
+                0 auto
+                60px;
+
+            padding:
+                30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #090909
+                );
+
+            border:
+                1px solid #292929;
+
+            text-align: center;
+
+        }
+
+
+        .pedigree-header h2 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 30px;
+
+            font-weight: normal;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .pedigree-header p {
+
+            color: #888888;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ========================================
+           ÁRVORE HORIZONTAL
+        ======================================== */
 
         .pedigree-wrapper {
+
+            width: 100%;
+
             overflow-x: auto;
-            padding: 20px 10px 40px;
+
+            padding:
+                20px 10px
+                50px;
+
         }
+
 
         .pedigree {
+
             min-width: 1250px;
+
             display: flex;
-            align-items: stretch;
+
+            align-items: center;
+
             justify-content: center;
-            gap: 0;
+
+            gap: 35px;
+
         }
+
+
+        /* ========================================
+           CÃO PRINCIPAL
+        ======================================== */
 
         .generation {
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
-            width: 270px;
-            gap: 25px;
-            position: relative;
+
+            gap: 30px;
+
         }
 
-        .generation-title {
-            text-align: center;
-            color: #d9a441;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 11px;
-            margin-bottom: 15px;
-        }
-
-        .generation.parents {
-            gap: 150px;
-        }
-
-        .generation.grandparents {
-            gap: 35px;
-        }
-
-        .generation.great-grandparents {
-            gap: 12px;
-        }
 
         .dog-card {
-            background: linear-gradient(145deg, #171717, #101010);
-            border: 1px solid #383838;
-            padding: 20px 18px;
-            min-height: 105px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+
             position: relative;
-            transition: 0.3s;
+
+            width: 270px;
+
+            min-height: 145px;
+
+            padding:
+                24px 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171717,
+                    #0b0b0b
+                );
+
+            border:
+                1px solid #333333;
+
+            box-shadow:
+                0 15px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
+
         }
 
-        .dog-card:hover {
-            border-color: #d9a441;
-            transform: translateY(-2px);
-        }
 
         .dog-card.main {
-            border-color: #d9a441;
-            background: linear-gradient(145deg, #1b1812, #101010);
+
+            width: 310px;
+
+            min-height: 180px;
+
+            border-color:
+                #555555;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #202020,
+                    #0b0b0b
+                );
+
         }
 
-        .dog-name {
-            color: #f2f2f2;
-            font-family: Georgia, serif;
-            font-size: 17px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
 
-        .dog-info {
-            margin-top: 8px;
-            color: #aaa;
-            font-size: 12px;
-            line-height: 1.6;
-        }
+        .dog-card h3 {
 
-        .dog-info strong {
-            color: #d9a441;
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 18px;
+
             font-weight: normal;
+
+            line-height: 1.4;
+
+            margin-bottom: 12px;
+
         }
+
+
+        .dog-card.main h3 {
+
+            font-size: 24px;
+
+        }
+
+
+        .dog-card .label {
+
+            display: block;
+
+            color: #777777;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .dog-card .rg {
+
+            color: #aaaaaa;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .dog-card .rg strong {
+
+            color: #dddddd;
+
+            font-weight: normal;
+
+        }
+
+
+        /* ========================================
+           CONECTORES
+        ======================================== */
 
         .connector {
-            width: 70px;
-            position: relative;
-            flex-shrink: 0;
-        }
 
-        .connector::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
+            width: 35px;
+
             height: 1px;
-            background: #555;
+
+            background: #555555;
+
+            flex-shrink: 0;
+
         }
 
-        /* LINHAS VERTICAIS DE CONEXÃO */
 
-        .parents-connector::after {
-            content: "";
+        .connector-vertical {
+
             position: absolute;
-            top: 25%;
-            bottom: 25%;
-            left: 50%;
-            width: 1px;
-            background: #555;
+
+            right: -36px;
+
+            top: 50%;
+
+            width: 35px;
+
+            height: 1px;
+
+            background: #555555;
+
         }
 
-        /* QUARTA GERAÇÃO */
 
-        .ancestry-section {
-            margin-top: 70px;
+        /* ========================================
+           DETALHAMENTO
+        ======================================== */
+
+        .detalhamento {
+
+            max-width: 1100px;
+
+            margin:
+                40px auto
+                0;
+
+            padding:
+                40px;
+
+            border-top:
+                1px solid #292929;
+
         }
 
-        .section-title {
+
+        .detalhamento h2 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 30px;
+
+            font-weight: normal;
+
             text-align: center;
-            font-family: Georgia, serif;
-            font-size: 28px;
-            font-weight: normal;
+
             margin-bottom: 35px;
+
         }
 
-        .section-title span {
-            color: #d9a441;
-        }
 
-        .ancestry-grid {
+        .detalhamento-grid {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
         }
 
-        .ancestry-column {
-            background: #111;
-            border: 1px solid #303030;
-            padding: 30px;
+
+        .detalhamento-card {
+
+            padding:
+                25px;
+
+            background: #0d0d0d;
+
+            border:
+                1px solid #292929;
+
         }
 
-        .ancestry-column h3 {
-            color: #d9a441;
-            font-family: Georgia, serif;
-            font-size: 20px;
+
+        .detalhamento-card h3 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 19px;
+
             font-weight: normal;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 15px;
+
+            margin-bottom: 10px;
+
         }
 
-        .ancestor {
-            padding: 15px 0;
-            border-bottom: 1px solid #252525;
-        }
 
-        .ancestor:last-child {
-            border-bottom: none;
-        }
+        .detalhamento-card p {
 
-        .ancestor-name {
-            font-family: Georgia, serif;
-            font-size: 15px;
-            color: #eee;
-        }
+            color: #888888;
 
-        .ancestor-rg {
-            color: #999;
-            font-size: 12px;
-            margin-top: 6px;
-        }
-
-        .ancestor-color {
-            color: #777;
-            font-size: 11px;
-            margin-top: 4px;
-        }
-
-        .notice {
-            margin-top: 30px;
-            background: #111;
-            border-left: 3px solid #d9a441;
-            padding: 22px;
-            color: #999;
             font-size: 13px;
+
             line-height: 1.7;
+
         }
+
+
+        .detalhamento-card .rg {
+
+            margin-top: 10px;
+
+            color: #aaaaaa;
+
+            font-size: 12px;
+
+        }
+
+
+        /* ========================================
+           RODAPÉ
+        ======================================== */
 
         footer {
-            border-top: 1px solid #252525;
-            background: #0b0b0b;
+
+            border-top:
+                1px solid #222222;
+
+            background: #050505;
+
             text-align: center;
-            padding: 35px 20px;
-            color: #666;
+
+            padding:
+                40px 20px;
+
+        }
+
+
+        footer h2 {
+
+            color: #dddddd;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            font-weight: normal;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        footer p {
+
+            color: #666666;
+
             font-size: 12px;
+
+            letter-spacing: 1px;
+
         }
 
-        @media (max-width: 900px) {
-            header {
-                padding: 20px;
-            }
 
-            .nav {
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media
+        (max-width: 1050px) {
+
+            .header-inner {
+
                 flex-direction: column;
-                align-items: flex-start;
+
+                padding:
+                    18px 20px;
+
+                gap: 12px;
+
             }
 
-            h1 {
-                font-size: 36px;
+
+            nav {
+
+                justify-content: center;
+
+                gap:
+                    10px 18px;
+
             }
 
-            .ancestry-grid {
-                grid-template-columns: 1fr;
+
+            .detalhamento-grid {
+
+                grid-template-columns:
+                    1fr;
+
             }
+
         }
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media
+        (max-width: 650px) {
+
+            .header-inner {
+
+                padding:
+                    18px 15px;
+
+            }
+
+
+            nav {
+
+                gap:
+                    8px 13px;
+
+            }
+
+
+            nav a {
+
+                font-size: 9px;
+
+                letter-spacing:
+                    0.7px;
+
+            }
+
+
+            main {
+
+                padding:
+                    55px 15px
+                    70px;
+
+            }
+
+
+            .titulo h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .pedigree-wrapper {
+
+                margin-left:
+                    -5px;
+
+                margin-right:
+                    -5px;
+
+            }
+
+
+            .detalhamento {
+
+                padding:
+                    30px 10px;
+
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <div class="nav">
 
-        <div class="logo">
+    <!-- ========================================
+         MENU
+    ======================================== -->
+
+    <header>
+
+        <div class="header-inner">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                CANIL <span>LRD</span>
+            </a>
+
+
+            <nav>
+
+
+                <a href="index.html">
+                    INÍCIO
+                </a>
+
+
+                <a href="canil.html">
+                    O CANIL
+                </a>
+
+
+                <a href="daemon.html">
+                    DAEMON
+                </a>
+
+
+                <a
+                    href="linhagens.html"
+                    class="active"
+                >
+                    LINHAGENS
+                </a>
+
+
+                <a href="ninhadas.html">
+                    NINHADAS
+                </a>
+
+
+                <a href="galeria.html">
+                    GALERIA
+                </a>
+
+
+                <a href="caes.html">
+                    CÃES
+                </a>
+
+
+                <a href="contato.html">
+                    CONTATO
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         CONTEÚDO
+    ======================================== -->
+
+    <main>
+
+
+        <section class="titulo">
+
+
+            <div class="subtitulo">
+                CANIL LRD
+            </div>
+
+
+            <h1>
+                Linhagens
+            </h1>
+
+
+            <p>
+
+                Conheça a origem e a composição
+                da linhagem de Daemon através
+                de seu pedigree.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- ========================================
+             IDENTIFICAÇÃO
+        ======================================== -->
+
+        <section class="pedigree-header">
+
+
+            <h2>
+                Daemon
+            </h2>
+
+
+            <p>
+
+                Detalhamento da linhagem e
+                ascendência.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- ========================================
+             PEDIGREE HORIZONTAL
+        ======================================== -->
+
+        <section class="pedigree-wrapper">
+
+
+            <div class="pedigree">
+
+
+                <!-- ================================
+                     GERAÇÃO PRINCIPAL
+                ================================= -->
+
+                <div class="generation">
+
+
+                    <div class="dog-card main">
+
+                        <span class="label">
+                            Exemplar
+                        </span>
+
+                        <h3>
+                            Daemon
+                        </h3>
+
+                        <div class="rg">
+                            <strong>
+                                RG:
+                            </strong>
+                            Consulte o registro oficial.
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="connector"></div>
+
+
+                <!-- ================================
+                     PAIS
+                ================================= -->
+
+                <div class="generation">
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Pai
+                        </span>
+
+                        <h3>
+                            Nome do Pai
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Mãe
+                        </span>
+
+                        <h3>
+                            Nome da Mãe
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="connector"></div>
+
+
+                <!-- ================================
+                     AVÓS
+                ================================= -->
+
+                <div class="generation">
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Avô Paterno
+                        </span>
+
+                        <h3>
+                            Nome do Avô Paterno
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Avó Paterna
+                        </span>
+
+                        <h3>
+                            Nome da Avó Paterna
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Avô Materno
+                        </span>
+
+                        <h3>
+                            Nome do Avô Materno
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dog-card">
+
+                        <span class="label">
+                            Avó Materna
+                        </span>
+
+                        <h3>
+                            Nome da Avó Materna
+                        </h3>
+
+                        <div class="rg">
+
+                            <strong>
+                                RG:
+                            </strong>
+
+                            Informar RG
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             DETALHAMENTO DA LINHAGEM
+        ======================================== -->
+
+        <section class="detalhamento">
+
+
+            <h2>
+                Detalhamento da Linhagem
+            </h2>
+
+
+            <div class="detalhamento-grid">
+
+
+                <article class="detalhamento-card">
+
+
+                    <h3>
+                        Anhanga-Pita &amp; Champions Line Black
+                    </h3>
+
+
+                    <p>
+
+                        Registro de linhagem integrante
+                        da ascendência apresentada
+                        no pedigree.
+
+                    </p>
+
+
+                    <div class="rg">
+
+                        <strong>
+                            RG/RSA/16/04958
+                        </strong>
+
+                    </div>
+
+
+                </article>
+
+
+                <article class="detalhamento-card">
+
+
+                    <h3>
+                        Linhagem Paterna
+                    </h3>
+
+
+                    <p>
+
+                        Informações genealógicas
+                        referentes à ascendência paterna
+                        do exemplar.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="detalhamento-card">
+
+
+                    <h3>
+                        Linhagem Materna
+                    </h3>
+
+
+                    <p>
+
+                        Informações genealógicas
+                        referentes à ascendência materna
+                        do exemplar.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="detalhamento-card">
+
+
+                    <h3>
+                        Pedigree
+                    </h3>
+
+
+                    <p>
+
+                        Estrutura genealógica apresentada
+                        de forma horizontal para facilitar
+                        a visualização das gerações.
+
+                    </p>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ========================================
+         RODAPÉ
+    ======================================== -->
+
+    <footer>
+
+
+        <h2>
             CANIL LRD
-        </div>
-
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="canil.html">O Canil</a>
-            <a href="caes.html">Nossos Cães</a>
-            <a href="linhagens.html" class="active">Linhagens</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-
-    </div>
-</header>
-
-
-<main>
-
-    <section class="intro">
-
-        <span>Pedigree & Genealogia</span>
-
-        <h1>Linhagens</h1>
-
-        <p>
-            Genealogia de <strong>Denzel B.K.V.B. — Daemon</strong>,
-            apresentada a partir das informações constantes em seu pedigree,
-            preservando a linhagem paterna e materna.
-        </p>
-
-    </section>
-
-
-    <!-- ÁRVORE HORIZONTAL -->
-
-    <div class="pedigree-wrapper">
-
-        <div class="pedigree">
-
-
-            <!-- GERAÇÃO 1 -->
-
-            <div class="generation">
-
-                <div class="generation-title">
-                    Daemon
-                </div>
-
-                <div class="dog-card main">
-
-                    <div class="dog-name">
-                        Denzel B.K.V.B.
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>Nome:</strong> Denzel B.K.V.B.<br>
-                        <strong>Raça:</strong> Dobermann<br>
-                        <strong>Sexo:</strong> Macho<br>
-                        <strong>Cor:</strong> Preto e Castanho<br>
-                        <strong>Nascimento:</strong> 19/10/2025<br>
-                        <strong>Registro:</strong> RG/RSA/25/02745
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="connector"></div>
-
-
-            <!-- GERAÇÃO 2 -->
-
-            <div class="generation parents">
-
-                <div class="generation-title">
-                    Pais
-                </div>
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Champion's Line Tirano
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>Sexo:</strong> Macho<br>
-                        <strong>Cor:</strong> Preto e Castanho<br>
-                        <strong>RG:</strong> RG/RSA/22/01335
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Brenda Million Dog
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>Sexo:</strong> Fêmea<br>
-                        <strong>Cor:</strong> Marrom e Castanho<br>
-                        <strong>RG:</strong> RG/RSA/23/02876
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="connector"></div>
-
-
-            <!-- GERAÇÃO 3 -->
-
-            <div class="generation grandparents">
-
-                <div class="generation-title">
-                    Avós
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Dare Wind After Dark
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SP/17/10235<br>
-                        <strong>Cor:</strong> Preto/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Champion's Line BR 01 BIA
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/RSA/20/04229<br>
-                        <strong>Cor:</strong> Preto e Castanho
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Adamas Dei Julian
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SPX/21/06023<br>
-                        <strong>Cor:</strong> Preto e Castanho
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Eria Pro Neon
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> BR12814<br>
-                        <strong>Cor:</strong> Marrom/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="connector"></div>
-
-
-            <!-- GERAÇÃO 4 -->
-
-            <div class="generation great-grandparents">
-
-                <div class="generation-title">
-                    Bisavós
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        RhallEx The Black Cairo
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SP/13/02439<br>
-                        <strong>Cor:</strong> Preto
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Doobs Legend Spirit Of The Braves Ariana
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SP/15/08452<br>
-                        <strong>Cor:</strong> Preto
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Natureza Brava 'S IAHN-NICOL Ringo Star
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/RS/15/03442<br>
-                        <strong>Cor:</strong> Preto
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Anhanga-Pita & Champions Line Black
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/RSA/16/04958<br>
-                        <strong>Cor:</strong> Preto
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Adamas Dei Big Boss
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SPX/18/04021<br>
-                        <strong>Cor:</strong> Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Adamas Dei Ayla
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SPX/18/04189<br>
-                        <strong>Cor:</strong> Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Venezia Di Monaco
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/SPAI/18/00263<br>
-                        <strong>Cor:</strong> Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="dog-card">
-
-                    <div class="dog-name">
-                        Gretha Gotter Der Starke
-                    </div>
-
-                    <div class="dog-info">
-                        <strong>RG:</strong> RG/RSA/21/02705<br>
-                        <strong>Cor:</strong> Marrom e Castanho
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- QUARTA GERAÇÃO ORGANIZADA -->
-
-    <section class="ancestry-section">
-
-        <h2 class="section-title">
-            <span>Detalhamento</span> das Linhagens
         </h2>
 
 
-        <div class="ancestry-grid">
+        <p>
+            Excelência em Dobermanns
+        </p>
 
 
-            <!-- LINHA PATERNA -->
-
-            <div class="ancestry-column">
-
-                <h3>Linha Paterna</h3>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        RhallEx The Black Cairo
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/SP/13/02439
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Doobs Legend Spirit Of The Braves Ariana
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/SP/15/08452
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Natureza Brava 'S IAHN-NICOL Ringo Star
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/RS/15/03442
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Anhanga-Pita & Champions Line Black
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/RSA/16/04958
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- LINHA MATERNA -->
-
-            <div class="ancestry-column">
-
-                <h3>Linha Materna</h3>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Adamas Dei Big Boss
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/SPX/18/04021
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Adamas Dei Ayla
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/SPX/18/04189
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Eria Pro Neon
-                    </div>
-
-                    <div class="ancestor-rg">
-                        BR12814
-                    </div>
-
-                    <div class="ancestor-color">
-                        Marrom/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-
-                <div class="ancestor">
-
-                    <div class="ancestor-name">
-                        Venezia Di Monaco
-                    </div>
-
-                    <div class="ancestor-rg">
-                        RG/SPAI/18/00263
-                    </div>
-
-                    <div class="ancestor-color">
-                        Preto/Vermelho/Ferrugem
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="notice">
-
-            <strong>Observação genealógica:</strong><br>
-
-            As informações apresentadas nesta página foram organizadas
-            com base nos dados disponíveis no pedigree de
-            <strong>Denzel B.K.V.B. — Daemon</strong>.
-            O objetivo é apresentar de forma clara e visual a composição
-            genealógica das linhagens paterna e materna.
-
-            <br><br>
-
-            <strong>Registro do Daemon:</strong>
-            RG/RSA/25/02745
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    © Canil LRD — Excelência em Dobermanns
-
-</footer>
+    </footer>
 
 
 </body>
+
 </html>
