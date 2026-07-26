@@ -1,6 +1,6 @@
-CANIL LRD — SITE V2.0
+CANIL LRD — V3.0
+Substitua os arquivos HTML/CSS correspondentes no repositório canil-lrd.
+Mantenha daemon.png na raiz do repositório.
+Depois faça Commit changes na branch main. O GitHub Pages atualizará automaticamente.
 
-Páginas: Início, Nossos Cães, Daemon, Linhagens, Ninhadas, Galeria, O Canil e Contato.
-Edite os arquivos HTML e style.css. Troque daemon.png por suas fotos e atualize WhatsApp/Instagram.
-Os dados de pedigree devem ser preenchidos com informações oficiais confirmadas.
-Para publicar gratuitamente: GitHub Pages ou Cloudflare Pages.
+Pendências: adicionar WhatsApp, Instagram e e-mail reais; completar história do canil; conferir grafia final do pedigree; adicionar mais fotos.
