@@ -1,1 +1,1312 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nossos Cães | Canil LRD</title><link rel="stylesheet" href="style.css"></head><body><header><div class="container nav"><a class="logo" href="index.html">CANIL <span>LRD</span></a><nav><a href="caes.html">Cães</a><a href="linhagens.html">Linhagens</a><a href="ninhadas.html">Ninhadas</a><a href="galeria.html">Galeria</a><a href="canil.html">O Canil</a><a href="contato.html">Contato</a></nav></div></header><main><section><div class="container"><div class="eyebrow">Plantel LRD</div><h1>Nossos Cães</h1><p class="lead">Conheça os cães apresentados pelo Canil LRD.</p></div></section><section><div class="container grid"><article class="card"><img src="daemon.png" alt="Daemon"><h2>Daemon</h2><p class="muted">Denzel B.K.V.B. · Macho · Preto e Castanho</p><a class="btn primary" href="daemon.html">Ver perfil</a></article><article class="card"><h2>Em breve</h2><p class="muted">Novos perfis serão adicionados conforme o plantel for apresentado.</p></article></div></section></main><footer>© 2026 Canil LRD · Dobermanns</footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nossos Cães | Canil LRD</title>
+
+    <meta
+        name="description"
+        content="Conheça os exemplares do Canil LRD. Daemon — Denzel B.K.V.B., Dobermann de destaque do nosso plantel."
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(
+                    circle at top,
+                    #181818 0%,
+                    #090909 45%,
+                    #030303 100%
+                );
+            color: #f1f1f1;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(5, 5, 5, 0.97);
+            border-bottom: 1px solid #292929;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: auto;
+
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #c99a52;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #bcbcbc;
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #d2a45d;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1400px;
+            margin: auto;
+
+            padding: 80px 30px 50px;
+
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: #c99a52;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 68px);
+            font-weight: normal;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 780px;
+            margin: auto;
+
+            color: #999;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CÃO PRINCIPAL
+        ========================= */
+
+        .dog-profile {
+            max-width: 1300px;
+            margin: 30px auto 100px;
+
+            padding: 0 30px;
+        }
+
+        .dog-layout {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        /* =========================
+           ÁREA DA FOTO
+        ========================= */
+
+        .dog-photo {
+            position: relative;
+
+            min-height: 650px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171717,
+                    #090909
+                );
+
+            border: 1px solid #303030;
+
+            overflow: hidden;
+        }
+
+        /*
+        Para adicionar a foto do Daemon:
+
+        1. Coloque a imagem no repositório.
+        2. Exemplo:
+           imagens/daemon.jpg
+
+        3. Remova o conteúdo .photo-placeholder
+           e use uma imagem <img>.
+        */
+
+        .photo-placeholder {
+            height: 100%;
+            min-height: 650px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+        }
+
+        .photo-placeholder span {
+            color: #c99a52;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .photo-placeholder h3 {
+            font-size: 36px;
+            font-weight: normal;
+
+            margin-bottom: 10px;
+        }
+
+        .photo-placeholder p {
+            color: #777;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           INFORMAÇÕES
+        ========================= */
+
+        .dog-info {
+            padding: 20px 0;
+        }
+
+        .dog-info .label {
+            color: #c99a52;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        .dog-info h2 {
+            font-size: clamp(38px, 5vw, 60px);
+
+            font-weight: normal;
+
+            line-height: 1.1;
+
+            margin-bottom: 10px;
+        }
+
+        .registered-name {
+            color: #aaa;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           FICHA TÉCNICA
+        ========================= */
+
+        .specs {
+            border-top: 1px solid #303030;
+            border-bottom: 1px solid #303030;
+
+            margin: 25px 0 30px;
+        }
+
+        .spec {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #222;
+        }
+
+        .spec:last-child {
+            border-bottom: none;
+        }
+
+        .spec span:first-child {
+            color: #777;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec span:last-child {
+            color: #eee;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 13px;
+
+            text-align: right;
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border: 1px solid #c99a52;
+
+            color: #c99a52;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #c99a52;
+            color: #080808;
+        }
+
+        .btn.secondary {
+            border-color: #444;
+            color: #bbb;
+        }
+
+        .btn.secondary:hover {
+            border-color: #c99a52;
+            color: #c99a52;
+            background: transparent;
+        }
+
+
+        /* =========================
+           CARACTERÍSTICAS
+        ========================= */
+
+        .characteristics {
+            max-width: 1200px;
+
+            margin: 0 auto 100px;
+
+            padding: 0 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            font-weight: normal;
+        }
+
+        .characteristics-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .characteristic {
+            padding: 30px;
+
+            background: #101010;
+
+            border: 1px solid #2d2d2d;
+
+            text-align: center;
+        }
+
+        .characteristic h3 {
+            color: #c99a52;
+
+            font-size: 19px;
+
+            font-weight: normal;
+
+            margin-bottom: 12px;
+        }
+
+        .characteristic p {
+            color: #999;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           GALERIA
+        ========================= */
+
+        .gallery {
+            max-width: 1300px;
+
+            margin: 0 auto 100px;
+
+            padding: 0 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4 / 3;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #0c0c0c
+                );
+
+            border: 1px solid #2d2d2d;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .gallery-item span {
+            color: #666;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           RESUMO DA LINHAGEM
+        ========================= */
+
+        .lineage {
+            max-width: 1000px;
+
+            margin: 0 auto 100px;
+
+            padding: 0 30px;
+
+            text-align: center;
+        }
+
+        .lineage-box {
+            background: #101010;
+
+            border: 1px solid #303030;
+
+            padding: 40px;
+        }
+
+        .lineage-box h3 {
+            font-size: 26px;
+
+            font-weight: normal;
+
+            margin-bottom: 30px;
+        }
+
+        .lineage-tree {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .lineage-item {
+            min-width: 200px;
+
+            padding: 20px;
+
+            border: 1px solid #383838;
+
+            background: #151515;
+        }
+
+        .lineage-item strong {
+            display: block;
+
+            color: #eee;
+
+            font-size: 15px;
+
+            font-weight: normal;
+
+            margin-bottom: 7px;
+        }
+
+        .lineage-item span {
+            color: #c99a52;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+        }
+
+        .lineage-arrow {
+            color: #c99a52;
+
+            font-size: 22px;
+        }
+
+        .lineage-button {
+            margin-top: 30px;
+        }
+
+
+        /* =========================
+           FUTUROS EXEMPLARES
+        ========================= */
+
+        .future {
+            max-width: 1200px;
+
+            margin: 0 auto 80px;
+
+            padding: 0 30px;
+        }
+
+        .future-card {
+            padding: 55px 30px;
+
+            background: #0e0e0e;
+
+            border: 1px solid #292929;
+
+            text-align: center;
+        }
+
+        .future-card h3 {
+            font-size: 27px;
+
+            font-weight: normal;
+
+            margin-bottom: 12px;
+        }
+
+        .future-card p {
+            color: #777;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #282828;
+
+            background: #050505;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            color: #777;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: #c99a52;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .header-inner {
+                flex-direction: column;
+
+                padding: 18px 15px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            .dog-layout {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .dog-photo {
+                min-height: 500px;
+            }
+
+            .photo-placeholder {
+                min-height: 500px;
+            }
+
+            .characteristics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding-top: 50px;
+            }
+
+            .dog-profile,
+            .characteristics,
+            .gallery,
+            .lineage,
+            .future {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .dog-photo {
+                min-height: 400px;
+            }
+
+            .photo-placeholder {
+                min-height: 400px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lineage-box {
+                padding: 25px 15px;
+            }
+
+            .lineage-arrow {
+                transform: rotate(90deg);
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            CANIL <span>LRD</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="canil.html">
+                O Canil
+            </a>
+
+            <a href="caes.html" class="active">
+                Nossos Cães
+            </a>
+
+            <a href="linhagens.html">
+                Linhagens
+            </a>
+
+            <a href="ninhadas.html">
+                Ninhadas
+            </a>
+
+            <a href="galeria.html">
+                Galeria
+            </a>
+
+            <a href="contato.html">
+                Contato
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="eyebrow">
+        Canil LRD • Plantel
+    </div>
+
+    <h1>
+        Nossos Cães
+    </h1>
+
+    <p>
+        Conheça os exemplares que representam a seleção,
+        dedicação e visão do Canil LRD na criação do Dobermann.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     PERFIL DAEMON
+========================= -->
+
+<section class="dog-profile">
+
+    <div class="dog-layout">
+
+
+        <!-- FOTO -->
+
+        <div class="dog-photo">
+
+            <div class="photo-placeholder">
+
+                <span>
+                    Canil LRD
+                </span>
+
+                <h3>
+                    Daemon
+                </h3>
+
+                <p>
+                    Espaço reservado para a fotografia oficial
+                    do exemplar.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="dog-info">
+
+            <div class="label">
+                Exemplar em destaque
+            </div>
+
+            <h2>
+                Daemon
+            </h2>
+
+            <div class="registered-name">
+                Denzel B.K.V.B.
+            </div>
+
+
+            <div class="specs">
+
+
+                <div class="spec">
+
+                    <span>
+                        Raça
+                    </span>
+
+                    <span>
+                        Dobermann
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Sexo
+                    </span>
+
+                    <span>
+                        Macho
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Idade
+                    </span>
+
+                    <span>
+                        9 meses
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Peso
+                    </span>
+
+                    <span>
+                        42 kg
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Altura
+                    </span>
+
+                    <span>
+                        74 cm de cernelha
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Cor
+                    </span>
+
+                    <span>
+                        Preto e Castanho
+                    </span>
+
+                </div>
+
+
+                <div class="spec">
+
+                    <span>
+                        Registro
+                    </span>
+
+                    <span>
+                        RG/RSA/25/02745
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="buttons">
+
+                <a
+                    href="linhagens.html"
+                    class="btn"
+                >
+                    Ver Linhagem
+                </a>
+
+                <a
+                    href="galeria.html"
+                    class="btn secondary"
+                >
+                    Ver Galeria
+                </a>
+
+                <a
+                    href="contato.html"
+                    class="btn secondary"
+                >
+                    Entrar em Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CARACTERÍSTICAS
+========================= -->
+
+<section class="characteristics">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            Perfil
+        </div>
+
+        <h2>
+            Características
+        </h2>
+
+    </div>
+
+
+    <div class="characteristics-grid">
+
+
+        <div class="characteristic">
+
+            <h3>
+                Estrutura
+            </h3>
+
+            <p>
+                Exemplar de porte expressivo,
+                com 42 kg e 74 cm de cernelha
+                aos 9 meses.
+            </p>
+
+        </div>
+
+
+        <div class="characteristic">
+
+            <h3>
+                Presença
+            </h3>
+
+            <p>
+                Forte presença física e expressão
+                característica do Dobermann.
+            </p>
+
+        </div>
+
+
+        <div class="characteristic">
+
+            <h3>
+                Linhagem
+            </h3>
+
+            <p>
+                Descendente de linhagens registradas,
+                com pedigree apresentado na página
+                oficial de linhagens do Canil LRD.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALERIA
+========================= -->
+
+<section class="gallery">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            Registro Visual
+        </div>
+
+        <h2>
+            Galeria do Daemon
+        </h2>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 01
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 02
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 03
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 04
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 05
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <span>
+                Foto 06
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LINHAGEM RESUMIDA
+========================= -->
+
+<section class="lineage">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            Genealogia
+        </div>
+
+        <h2>
+            Linhagem de Daemon
+        </h2>
+
+    </div>
+
+
+    <div class="lineage-box">
+
+        <h3>
+            Denzel B.K.V.B.
+        </h3>
+
+
+        <div class="lineage-tree">
+
+
+            <div class="lineage-item">
+
+                <strong>
+                    Champion's Line Tirano
+                </strong>
+
+                <span>
+                    Pai
+                </span>
+
+            </div>
+
+
+            <div class="lineage-arrow">
+                →
+            </div>
+
+
+            <div class="lineage-item">
+
+                <strong>
+                    Denzel B.K.V.B.
+                </strong>
+
+                <span>
+                    Daemon
+                </span>
+
+            </div>
+
+
+            <div class="lineage-arrow">
+                ←
+            </div>
+
+
+            <div class="lineage-item">
+
+                <strong>
+                    Brenda Million Dog
+                </strong>
+
+                <span>
+                    Mãe
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="lineage-button">
+
+            <a
+                href="linhagens.html"
+                class="btn"
+            >
+                Ver Pedigree Completo
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTUROS EXEMPLARES
+========================= -->
+
+<section class="future">
+
+    <div class="future-card">
+
+        <div class="eyebrow">
+            Plantel LRD
+        </div>
+
+        <h3>
+            Novos exemplares
+        </h3>
+
+        <p>
+            Esta área será atualizada conforme novos exemplares
+            integrarem oficialmente o plantel do Canil LRD.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © <span id="year"></span>
+
+    <strong>
+        Canil LRD
+    </strong>
+
+    — Excelência em Dobermanns
+
+</footer>
+
+
+
+<script>
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
