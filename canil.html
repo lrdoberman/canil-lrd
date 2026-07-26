@@ -1,1 +1,1205 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>O Canil | Canil LRD</title><link rel="stylesheet" href="style.css"></head><body><header><div class="container nav"><a class="logo" href="index.html">CANIL <span>LRD</span></a><nav><a href="caes.html">Cães</a><a href="linhagens.html">Linhagens</a><a href="ninhadas.html">Ninhadas</a><a href="galeria.html">Galeria</a><a href="canil.html">O Canil</a><a href="contato.html">Contato</a></nav></div></header><main><section><div class="container"><div class="eyebrow">Nossa identidade</div><h1>O Canil LRD</h1><p class="lead">Um projeto dedicado ao Dobermann e à construção de um legado baseado em qualidade, responsabilidade e respeito à raça.</p></div></section><section><div class="container two"><div><div class="eyebrow">Filosofia</div><h2>Mais que cães. Um legado.</h2><p>O Canil LRD busca apresentar cães com presença, estrutura, temperamento e linhagens acompanhadas com transparência.</p></div><div class="notice">A história institucional definitiva será preenchida com as informações fornecidas pelo Canil LRD.</div></div></section></main><footer>© 2026 Canil LRD · Dobermanns</footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>O Canil | Canil LRD</title>
+
+    <meta
+        name="description"
+        content="Conheça a história, filosofia e identidade do Canil LRD."
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #1a1a1a 0%,
+                    #0b0b0b 40%,
+                    #050505 100%
+                );
+
+            color: #eeeeee;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* ========================================
+           MENU
+        ======================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 9999;
+
+            background:
+                rgba(5, 5, 5, 0.97);
+
+            border-bottom:
+                1px solid #292929;
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
+        }
+
+
+        .header-inner {
+
+            width: 100%;
+
+            max-width: 1400px;
+
+            min-height: 76px;
+
+            margin: 0 auto;
+
+            padding:
+                15px 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+        }
+
+
+        .logo {
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            white-space: nowrap;
+
+        }
+
+
+        .logo span {
+
+            color: #999999;
+
+            font-weight: normal;
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+        }
+
+
+        nav a {
+
+            position: relative;
+
+            color: #999999;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+            padding: 10px 0;
+
+            white-space: nowrap;
+
+            transition:
+                color 0.3s ease;
+
+        }
+
+
+        nav a:hover {
+
+            color: #ffffff;
+
+        }
+
+
+        nav a.active {
+
+            color: #ffffff;
+
+        }
+
+
+        nav a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 2px;
+
+            height: 1px;
+
+            background: #ffffff;
+
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+
+            min-height:
+                65vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                80px 30px;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,0.35),
+                    rgba(0,0,0,0.9)
+                ),
+
+                url("daemon-03.png")
+                center center / cover
+                no-repeat;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .hero-subtitle {
+
+            color: #999999;
+
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            color: #ffffff;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    90px
+                );
+
+            font-weight: normal;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero p {
+
+            color: #cccccc;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* ========================================
+           CONTEÚDO
+        ======================================== */
+
+        main {
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+
+        section {
+
+            padding:
+                100px 40px;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+
+        }
+
+
+        .section-title span {
+
+            display: block;
+
+            color: #777777;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .section-title h2 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            font-weight: normal;
+
+        }
+
+
+        /* ========================================
+           INTRODUÇÃO
+        ======================================== */
+
+        .intro {
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+        }
+
+
+        .intro p {
+
+            color: #999999;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* ========================================
+           BLOCOS
+        ======================================== */
+
+        .content-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        .content-card {
+
+            padding:
+                45px 40px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #090909
+                );
+
+            border:
+                1px solid #292929;
+
+        }
+
+
+        .content-card h3 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 28px;
+
+            font-weight: normal;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .content-card p {
+
+            color: #888888;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* ========================================
+           VALORES
+        ======================================== */
+
+        .values {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .value {
+
+            text-align: center;
+
+            padding:
+                40px 25px;
+
+            border-top:
+                1px solid #333333;
+
+            border-bottom:
+                1px solid #222222;
+
+        }
+
+
+        .value h3 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 24px;
+
+            font-weight: normal;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .value p {
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ========================================
+           CTA
+        ======================================== */
+
+        .cta {
+
+            text-align: center;
+
+            border-top:
+                1px solid #222222;
+
+        }
+
+
+        .cta h2 {
+
+            color: #eeeeee;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 42px;
+
+            font-weight: normal;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .cta p {
+
+            color: #888888;
+
+            max-width: 650px;
+
+            margin:
+                0 auto 30px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border:
+                1px solid #555555;
+
+            padding:
+                15px 30px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
+
+        }
+
+
+        .button:hover {
+
+            background: #222222;
+
+            border-color: #ffffff;
+
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+
+            border-top:
+                1px solid #222222;
+
+            background: #050505;
+
+            text-align: center;
+
+            padding:
+                50px 20px;
+
+        }
+
+
+        footer h2 {
+
+            color: #dddddd;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
+            font-weight: normal;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        footer p {
+
+            color: #666666;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media
+        (max-width: 1050px) {
+
+            .header-inner {
+
+                flex-direction: column;
+
+                padding:
+                    18px 20px;
+
+                gap: 12px;
+
+            }
+
+
+            nav {
+
+                justify-content: center;
+
+                gap:
+                    10px 18px;
+
+            }
+
+
+            .content-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .values {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media
+        (max-width: 650px) {
+
+            .header-inner {
+
+                padding:
+                    18px 15px;
+
+            }
+
+
+            nav {
+
+                gap:
+                    8px 13px;
+
+            }
+
+
+            nav a {
+
+                font-size: 9px;
+
+                letter-spacing:
+                    0.7px;
+
+            }
+
+
+            section {
+
+                padding:
+                    70px 15px;
+
+            }
+
+
+            .hero {
+
+                min-height:
+                    70vh;
+
+            }
+
+
+            .values {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .content-card {
+
+                padding:
+                    30px 25px;
+
+            }
+
+
+            .cta h2 {
+
+                font-size: 35px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         MENU PRINCIPAL
+    ======================================== -->
+
+    <header>
+
+        <div class="header-inner">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                CANIL <span>LRD</span>
+            </a>
+
+
+            <nav>
+
+
+                <a href="index.html">
+                    INÍCIO
+                </a>
+
+
+                <a
+                    href="canil.html"
+                    class="active"
+                >
+                    O CANIL
+                </a>
+
+
+                <a href="daemon.html">
+                    DAEMON
+                </a>
+
+
+                <a href="linhagens.html">
+                    LINHAGENS
+                </a>
+
+
+                <a href="ninhadas.html">
+                    NINHADAS
+                </a>
+
+
+                <a href="galeria.html">
+                    GALERIA
+                </a>
+
+
+                <a href="caes.html">
+                    CÃES
+                </a>
+
+
+                <a href="contato.html">
+                    CONTATO
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <div class="hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-subtitle">
+                CANIL LRD
+            </div>
+
+
+            <h1>
+                O Canil
+            </h1>
+
+
+            <p>
+
+                Uma criação guiada por seleção,
+                identidade, estrutura e
+                compromisso com a raça Dobermann.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <main>
+
+
+        <!-- ========================================
+             INTRODUÇÃO
+        ======================================== -->
+
+        <section>
+
+
+            <div class="section-title">
+
+                <span>
+                    Nossa identidade
+                </span>
+
+                <h2>
+                    Canil LRD
+                </h2>
+
+            </div>
+
+
+            <div class="intro">
+
+
+                <p>
+
+                    O Canil LRD nasce de uma visão
+                    dedicada à criação e seleção de
+                    Dobermanns, buscando exemplares
+                    que expressem equilíbrio entre
+                    estrutura, presença, temperamento
+                    e linhagem.
+
+                </p>
+
+
+                <p>
+
+                    Nosso trabalho valoriza a
+                    construção de uma identidade
+                    própria, respeitando a história
+                    da raça e buscando evolução
+                    constante.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             FILOSOFIA
+        ======================================== -->
+
+        <section>
+
+
+            <div class="section-title">
+
+                <span>
+                    Filosofia
+                </span>
+
+                <h2>
+                    Nossa Visão
+                </h2>
+
+            </div>
+
+
+            <div class="content-grid">
+
+
+                <article class="content-card">
+
+
+                    <h3>
+                        Seleção
+                    </h3>
+
+
+                    <p>
+
+                        A seleção de exemplares é
+                        baseada na busca por qualidade,
+                        equilíbrio e características
+                        que contribuam para a evolução
+                        da criação.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="content-card">
+
+
+                    <h3>
+                        Linhagem
+                    </h3>
+
+
+                    <p>
+
+                        A história genealógica de cada
+                        exemplar possui importância
+                        fundamental na construção de
+                        uma criação consciente e
+                        planejada.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="content-card">
+
+
+                    <h3>
+                        Estrutura
+                    </h3>
+
+
+                    <p>
+
+                        Valorizamos a estrutura,
+                        proporção e presença que
+                        caracterizam a identidade
+                        do Dobermann.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="content-card">
+
+
+                    <h3>
+                        Temperamento
+                    </h3>
+
+
+                    <p>
+
+                        O equilíbrio comportamental
+                        é parte essencial de nossa
+                        visão, buscando cães seguros,
+                        equilibrados e com presença.
+
+                    </p>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             VALORES
+        ======================================== -->
+
+        <section>
+
+
+            <div class="section-title">
+
+                <span>
+                    Princípios
+                </span>
+
+                <h2>
+                    O que buscamos
+                </h2>
+
+            </div>
+
+
+            <div class="values">
+
+
+                <article class="value">
+
+
+                    <h3>
+                        Excelência
+                    </h3>
+
+
+                    <p>
+
+                        Buscar constantemente a
+                        evolução da criação e a
+                        qualidade dos exemplares.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="value">
+
+
+                    <h3>
+                        Respeito
+                    </h3>
+
+
+                    <p>
+
+                        Respeitar a raça, sua história
+                        e a responsabilidade envolvida
+                        em sua criação.
+
+                    </p>
+
+
+                </article>
+
+
+                <article class="value">
+
+
+                    <h3>
+                        Identidade
+                    </h3>
+
+
+                    <p>
+
+                        Construir uma linhagem com
+                        personalidade e características
+                        próprias.
+
+                    </p>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             CTA
+        ======================================== -->
+
+        <section class="cta">
+
+
+            <h2>
+                Conheça Daemon
+            </h2>
+
+
+            <p>
+
+                Conheça um dos exemplares de
+                destaque do Canil LRD e descubra
+                sua história, características
+                e linhagem.
+
+            </p>
+
+
+            <a
+                href="daemon.html"
+                class="button"
+            >
+                Conhecer Daemon
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer>
+
+
+        <h2>
+            CANIL LRD
+        </h2>
+
+
+        <p>
+            Excelência em Dobermanns
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
